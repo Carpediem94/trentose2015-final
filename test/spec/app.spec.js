@@ -3,8 +3,19 @@
 
 describe("Santa", function() {
 
-  it("should...", function() {  
-    
-  });    
+  it("should not undefined", function() {  
+    var question = SantaModel.getCurrentRequest();
+    expect(question).not.toBeUndefined();
+  });
+  
+  it("should not undefined", function() {  
+    var question = SantaModel.getCurrentRequest();
+    expect(question).not.toBeNull();
+  });
+  
+  it("should fail answer", function() {
+    var answer = SantaModel.pack("yes");
+    expect(answer).toBe(0);
+  });
  
 });
